@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     
-    background-image: url(/16-Week/My_First_Repo/images/background-image.png);
+    background-image: url("../images/background-image.png");
 }
 
 header {
