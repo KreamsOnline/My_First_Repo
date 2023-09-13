@@ -1,0 +1,112 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    
+    background-image: url(/16-Week/My_First_Repo/images/background-image.png);
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    padding: 5px 20px 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    padding: 40px;
+    background: rgba(225, 225, 225, .5);
+    margin: 20px;
+    border-radius: 5px;
+}
+
+#projects {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+}
+
+#projects h2 {
+    margin-bottom: 20px;
+}
+
+.project {
+    display: inline-block;
+    width: 25%;
+    margin: 0 2%;
+    text-align: left;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for project items */
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Style for the carousel container */
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Style for the carousel wrapper */
+.carousel {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+/* Style for each carousel item */
+.carousel-item {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
+    margin-right: 10px; /* Adjust the spacing between items */
+    background-color: #ccc;
+    scroll-snap-align: start;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
