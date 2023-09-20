@@ -7,9 +7,9 @@ body, h1, h2, h3, p {
 /* Basic styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
+
     
-    background-image: url("../images/background-image.png");
 }
 
 header {
@@ -17,7 +17,19 @@ header {
     background-color: black;
     color: #fff;
     padding: 5px 20px 5px;
+    display: flex;
+    justify-content: space-between;
 }
+
+header img {
+    justify-content: flex-start;
+}
+
+nav {
+    justify-content: flex-end;
+    align-self: center;
+}
+
 
 nav ul {
     list-style-type: none;
@@ -35,78 +47,90 @@ nav a {
 }
 
 section {
-    padding: 40px;
-    background: rgba(225, 225, 225, .5);
-    margin: 20px;
-    border-radius: 5px;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    font-size: 2em;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+#about {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px;
+}
+
+#about h2 {
+    align-self: flex-start;
+    
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 #projects {
-    background-color: #f9f9f9;
-    padding: 40px;
+    display: flex;
+    justify-content: center;
     text-align: center;
-}
-
-#projects h2 {
-    margin-bottom: 20px;
+    padding: 20px;
+    
 }
 
 .project {
-    display: inline-block;
-    width: 25%;
-    margin: 0 2%;
-    text-align: left;
+    width: 30%;
+    padding: 10px;
+    border: 1px solid black;
+}
+.grid-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.component {
+    border: 1px solid #ccc;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    margin: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
 }
 
-/* Hover effect for project items */
-.project:hover {
-    transform: scale(1.05);
+/* Title at the top */
+.component h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.project img {
+/* Rows */
+.row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Image on the left */
+.row img {
     max-width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    height: auto;
 }
 
+/* Content on the right */
+.row p {
+    font-size: 16px;
+}
 
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: #fff;
-}
-
-/* Style for the carousel container */
-.carousel-container {
-    overflow: hidden;
-    width: 100%;
-    padding: 20px;
-}
-
-/* Style for the carousel wrapper */
-.carousel {
-    display: flex;
-    overflow: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-}
-
-/* Style for each carousel item */
-.carousel-item {
-    flex: 0 0 auto;
-    width: 300px; /* Adjust the width as needed */
-    height: auto; /* Adjust the height as needed */
-    margin-right: 10px; /* Adjust the spacing between items */
-    background-color: #ccc;
-    scroll-snap-align: start;
-    text-align: center;
-    line-height: 200px;
-    font-size: 24px;
 }
